@@ -3,6 +3,8 @@ const app = express()
 const port = 3000;
 const fetch = require('node-fetch')
 
+app.get('/', (req, res) => { res.send(`<script>window.location.href = "https://github.com/Hello50511/lunch-api"</script>`) })
+
 app.get('/school', (req, res) => {
     let schoolName = req.query.name;
     let url = 'https://open.neis.go.kr/hub/schoolInfo?Type=json&pIndex=1&pSize=100&SCHUL_NM=' + encodeURI(schoolName)
