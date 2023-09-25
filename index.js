@@ -10,9 +10,7 @@ app.get('/school', (req, res) => {
     let url = 'https://open.neis.go.kr/hub/schoolInfo?Type=json&pIndex=1&pSize=100&SCHUL_NM=' + encodeURI(schoolName)
 
     fetch(url).then(res => res.json()).then(json => {
-        let schools = [
-            
-        ]
+        let schools = []
 
         for (var i = 0; i < json['schoolInfo'][1]["row"].length; i++) {
             let schoolData = json['schoolInfo'][1]["row"][i];
