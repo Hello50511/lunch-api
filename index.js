@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000;
 const fetch = require('node-fetch')
+var cors = require('cors')
+app.use(cors())
 
 app.get('/', (req, res) => { res.send(`<script>window.location.href = "https://github.com/Hello50511/lunch-api"</script>`) })
 
